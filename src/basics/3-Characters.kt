@@ -24,8 +24,8 @@ fun main() {
 
     /**
      * Number deger alan bir char degiskeni,Int'e cevirirken,gercek sayisal degerini gormeyiz.
-     * Alacagi ve bizim de gorecegimiz deger,ASCII tablsundaki o sayisal degerin karsiligi(decimal degeri) olacaktir.
-     * Ayrica toInt() depreceted olmustur,yerine .code kullanilir.
+     * Alacagi ve bizim de gorecegimiz deger,ASCII tablosundaki o sayisal degerin karsiligi(decimal degeri) olacaktir.
+     * Ayrica toInt() deprecated olmustur,yerine .code kullanilir.
      * Kod challenglarinda depreceted kod birakmamayi oncelik halina getirmeliyiz.
      * Eger bir sebepten ötürü,char icerisindeki sayinin gercek degerini gormek istiyorsak digitToInt() fonksiyonunu kullanabiliriz.
      * Depreceted demek bu kod suan kullaniliyor fakat belli bir api levelendan sonra bu kod kullanimdan kalkacaktir demektir.
