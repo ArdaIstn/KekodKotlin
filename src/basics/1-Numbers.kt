@@ -98,7 +98,8 @@ fun main() {
     //Eger biz bir primitive bir degiskeni null yapiyorsak,bu degisken artik primitive tip degil,buyuk class tiplerine donusur.
 
     // Byte araligi icin asagidaki gibi olur.Özel optimizasyonlar bizim ayni referans alanina isaret ettigimizi gosterir.
-    //Yani,farkli degiskenler gibi gozukse de aslinda bunlar ayni degiskenlerdir.
+    // Yani,farkli degiskenler gibi gozukse de aslinda bunlar ayni degiskenlerdir.
+    // Stack'de tutulur.
 
     val number: Int = 100 // primitive tip
     val boxedNumber: Int? = number // class tipi
@@ -111,6 +112,20 @@ fun main() {
     val boxedNumber2: Int? = number2
     val anotherBoxedNumber2: Int? = number2
     println(boxedNumber2 === anotherBoxedNumber2) // false
+
+    /**
+     * Stack ve Heap denen 2 adet memory alanımız vardır.Memory dediğimiz şey temelde bu 2 yapıdan oluşur.
+     * Biz bir primitive(unboxed) değişken oluşturduğumuz zaman,hem değişkenin kendisi hem de değeri için stackde yer ayrılır.
+     * Bu ikisi toplamda bir Int kadar yer kaplar.Stack alanı,heap alanından daha hızlı çalışır.
+     * Primitive tipler,hem değişkenin kendisini hem deiçerdiği değeri aynı stack alanında,daha performanslı çalışan alanda tutarlar.
+
+     * Eğer referans tipli bir değişkenle çalışıyorsak,o değişkenin ismi stackde tutulur,değeri heap'de tutulur.
+     * Örneğin val age : Int? yapıp herhangi bir değer atarsak,age'in kendisi stackde tutulur içerdiği değer ise heapde tutulur.
+     * Eğer bu değişkene null değerini verirsek,heapde kullandığı alan boşalır fakat stackde değişkenin ismi için yer kaplanmaya devam edilir.
+     * Dolayısıyla,değişkeni nullamamız,değişken için memory'de herhangi bir alan tutulmuyor anlamına gelmez.
+     * Değişkenin kendisi için bir alan tutulur fakat değeri için bir alan tutulmuyor anlamına gelir.
+     * Sonrasında bir değer atarsak,heapde değişkenin değeri,stack'de ise değişkenin kendisi tutulmaya devam edilir.
+     */
 
 
 }
