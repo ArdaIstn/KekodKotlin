@@ -117,7 +117,7 @@ fun main() {
      * Stack ve Heap denen 2 adet memory alanımız vardır.Memory dediğimiz şey temelde bu 2 yapıdan oluşur.
      * Biz bir primitive(unboxed) değişken oluşturduğumuz zaman,hem değişkenin kendisi hem de değeri için stackde yer ayrılır.
      * Bu ikisi toplamda bir Int kadar yer kaplar.Stack alanı,heap alanından daha hızlı çalışır.
-     * Primitive tipler,hem değişkenin kendisini hem deiçerdiği değeri aynı stack alanında,daha performanslı çalışan alanda tutarlar.
+     * Primitive tipler,hem değişkenin kendisini hem de içerdiği değeri aynı stack alanında,daha performanslı çalışan alanda tutarlar.
 
      * Eğer referans tipli bir değişkenle çalışıyorsak,o değişkenin ismi stackde tutulur,değeri heap'de tutulur.
      * Örneğin val age : Int? yapıp herhangi bir değer atarsak,age'in kendisi stackde tutulur içerdiği değer ise heapde tutulur.
