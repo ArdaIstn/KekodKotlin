@@ -127,5 +127,25 @@ fun main() {
      * Sonrasında bir değer atarsak,heapde değişkenin değeri,stack'de ise değişkenin kendisi tutulmaya devam edilir.
      */
 
+    /**
+     * Backend'ten donen Double ve Float degiskenleri kullanırken dikkatli olmamız gerekiyor.
+     * Eger backendden donen deger uzerinde "." isaretine gore bir split isi yapacaksak basimiz agriyabilir.
+     * Cunku backend'den donen Double ve Float degiskenleri her zaman "." ile ayrismiyor olabilir.
+     * Database dilinin farkli olmasına gore (turkce-ingilizce gibi) "." yerine "," ile de ayrisiyor olabilir.
+     */
+
+    //bitwise operators
+    val bitValue = 0b00100101
+    val bitValue2 = 0b10110011
+
+    println(bitValue)
+    println(bitValue2)
+
+
+    val resultAndBit = bitValue.and(bitValue2)
+    println("ResulAndBit:$resultAndBit") // 0b00100001 = 33(hex)
+
+    val resultOrBit = bitValue.or(bitValue2)
+    println("ResultOrBit:$resultOrBit") // 0b10110111 = 183
 
 }
