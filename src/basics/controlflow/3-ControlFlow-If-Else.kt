@@ -66,11 +66,8 @@ fun main() {
      * Ternary yerine asagidaki gibi bir kullanim yapabiliriz.
      */
     val isStudent = false
-    val isStudent2 = if (isStudent) {
-        "true"
-    } else {
-        "false"
-    }
+    val isStudent2 = if (isStudent) { "true" } else { "false" }
+
     // Fakat bu kullanim gorunus olarak kotu bir kullanimdir.
 
     /*------------------------------------------------------------------------------------------------------------------*/
