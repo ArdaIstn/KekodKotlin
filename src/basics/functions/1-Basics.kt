@@ -71,7 +71,6 @@ fun main(): Unit {
  *
  */
 fun takeSquare(number: Int): Int {
-    val number = number
     return number * number
 }
 
@@ -144,4 +143,49 @@ fun getUserInfo4(vararg userInfo: Any) {
 //fun getUserInfo5(vararg userInfo : String,vararg userInfo2:String){
 //
 //}
+
+
+/**
+ * @JvmOverloads annotation'i default degeri olan parametrelere sahip bir fonksiyon varsa bu fonksiyonu java tarafından cagirilabilmesi icin elimizle bu fonksiyonu
+ * coklamamiza gerek kalmadan arka planda kendisi assembly koduna cevirirken bu fonksiyonu coklar.Eger calisilan projede hem java hem kotlin kodlari var ise kullanılır.
+ * Javada default arguments ve name arguments yoktur.Olmayan bir ozelligi cagirmamizi saglar.O fonksiyonun javadan cagirilabilir olmasi icin birden fazla
+ * oldugu seklinde yani overload edilmis seklini otomatik olarak yazacaktir.Uretecegi assembly kodu javadaki kodun benzeri olacagi icin java tarafindan cagirilabilir olacaktir.
+ */
+
+@JvmOverloads
+fun print(message: String = "Message") {
+    println(message)
+}
+
+
+/**
+ * Bir class extend edilebilir olup, yavru(child) sinif tarafindan miras(inherit) alinirsa ve bu sinifin override edilebilir open bir metodu varsa,bu method
+ * default argumente sahip olursa ve bu sinifi miras alan sinifta method override edilirse,override edilen methodun parametresine default argument tanimlanamz.
+ * Ust sinifin methodundaki default argument gecerli olur.
+ */
+open class A {
+    open fun foo(i: Int = 10) {
+
+    }
+}
+
+class B() : A() {
+    /*   override fun foo(i: Int = 5 ) {
+       }*/
+
+    //no default value allowed
+}
+
+
+/**
+ * Bir fonksiyon = koyularak return edecegi deger yazilabilir.(Single Expression Kullanimi)
+ */
+val userList = arrayOfNulls<String>(5)
+
+fun getListCount(): Int = userList.size
+fun getListCount2() = userList.size // Bu sekilde tipini belirtmesek bile type inference oldugu icin tipi otomatik olarak algılanır.
+
+fun getListCount3(): Int {
+    return userList.size
+}
 
