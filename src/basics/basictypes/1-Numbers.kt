@@ -1,4 +1,4 @@
-package basics
+package basics.basictypes
 
 /**
  * Ozellikle challenglarda degiskenleri tanimlarken,veri tiplerindeki araliklara uygun degiskenler tanimlamayliz.

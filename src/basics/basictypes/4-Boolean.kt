@@ -1,4 +1,4 @@
-package basics
+package basics.basictypes
 
 fun main() {
 

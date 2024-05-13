@@ -1,4 +1,4 @@
-package basics
+package basics.basictypes
 
 /**
  * Degiskenlerin kabaca 2 turu vardir.
