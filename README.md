@@ -1,4 +1,4 @@
-# Bu repoda ders sırasında işlenen konuların kodlarına,yorum satırlarındaki açıklamalara ve artı olarak benim ders sırasında söylenenleri not alıp,yorum satırı olarak eklediğim ekstra açıklamalara bakabilirsiniz.
+# Bu repoda Gökhan Öztürl'ün ders sırasında işlenen konuların kodlarına,yorum satırlarındaki açıklamalara ve artı olarak benim ders sırasında söylenenleri not alıp,yorum satırı olarak eklediğim ekstra açıklamalara bakabilirsiniz.
 
 
 <div align="center">
